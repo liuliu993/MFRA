@@ -1,0 +1,26 @@
+# Training configuration
+GPU: [0,1,2,3]
+
+VERBOSE: False
+
+MODEL:
+  MODE: 'mymodel_denoise_an'
+
+# Optimization arguments.
+OPTIM:
+  BATCH: 4
+#  BATCH: 8
+  EPOCHS: 100
+  # EPOCH_DECAY: [10]
+  LR_INITIAL: 1e-4
+  LR_MIN: 1e-6
+  # BETA1: 0.9
+
+TRAINING:
+  VAL_AFTER_EVERY: 1
+  RESUME: False
+  TRAIN_PS: 256
+  VAL_PS: 256
+  TRAIN_DIR: 'F:\wj\dataset\txt_an_data\train'       # path to training data
+  VAL_DIR: 'F:\wj\dataset\txt_an_data\test' # path to validation data
+  SAVE_DIR: './checkpoints'           # path to save models and images
